@@ -239,15 +239,15 @@ Clone this repository and create a new conda environment:
 
     (base) cd path/to/workshop_princeton_2021
     (base) conda env create -f environment.yml
-    (base) conda activate princeton
+    (base) conda activate fab21
 
 <details><summary>Alternatively, create environment manually</summary>
 <p>
 
 The conda environment can also be manually created:
 
-    (base) conda create -n princeton python=3.8 compas_fab>=0.19.1 --yes
-    (base) conda activate princeton
+    (base) conda create -n fab21 python=3.8 compas_fab>=0.19.1 --yes
+    (base) conda activate fab21
 
 </p>
 </details>
@@ -256,11 +256,11 @@ The conda environment can also be manually created:
 
 Also install `python.app` after activating the environment:
 
-    (princeton) conda install python.app
+    (fab21) conda install python.app
 
 ### Verify installation
 
-    (princeton) python -m compas
+    (fab21) python -m compas
 
     Yay! COMPAS is installed correctly!
 
@@ -270,11 +270,11 @@ Also install `python.app` after activating the environment:
 
 ### Install on Rhino
 
-    (princeton) python -m compas_rhino.install
-    (princeton) python -m compas_rhino.install -v 7.0
+    (fab21) python -m compas_rhino.install
+    (fab21) python -m compas_rhino.install -v 7.0
 
 ### Update installation
 
 To update your environment:
 
-    (princeton) conda env update -f environment.yml
+    (fab21) conda env update -f environment.yml

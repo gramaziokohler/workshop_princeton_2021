@@ -1,4 +1,4 @@
-name: princeton
+name: fab21
 channels:
     - conda-forge
 
