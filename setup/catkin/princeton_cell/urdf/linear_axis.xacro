@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:macro name="linear_axis" params="prefix">
+    <link name="${prefix}axis">
+      <inertial>
+        <origin xyz="0.0 0.0 0.0"/>
+        <mass value="120"/>
+        <inertia ixx="-4.98000" iyy="-5.95200" izz="0.82800" ixy="-0.00000" ixz="2.70000" iyz="-0.00000"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://princeton_cell/meshes/visual/axis.stl"/>
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://princeton_cell/meshes/collision/axis.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${prefix}cart_joint" type="prismatic">
+      <parent link="${prefix}axis"/>
+      <child  link="${prefix}cart"/>
+      <origin xyz="0 0 0" rpy="0 0 0 "/>
+      <axis   xyz="1 0 0"/>
+      <limit lower="-1.926" upper="0.675" effort="100000" velocity="2.618" />
+      <dynamics damping="0.2" friction="0" />
+    </joint>
+
+    <link name="${prefix}cart">
+      <inertial>
+        <origin xyz="0.0 0.0 0.0"/>
+        <mass value="120.00000"/>
+        <inertia ixx="-4.98000" iyy="-5.95200" izz="0.82800" ixy="-0.00000" ixz="2.70000" iyz="-0.00000"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://princeton_cell/meshes/visual/cart.stl"/>
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://princeton_cell/meshes/collision/cart.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+  </xacro:macro>
+</robot>
+
+
