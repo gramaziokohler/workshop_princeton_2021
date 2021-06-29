@@ -1,0 +1,19 @@
+controller_list:
+  - name: fake_robotAaxis_controller
+    joints:
+      - A_cart_joint
+      - A_joint_1
+      - A_joint_2
+      - A_joint_3
+      - A_joint_4
+      - A_joint_5
+      - A_joint_6
+  - name: fake_robotBaxis_controller
+    joints:
+      - B_cart_joint
+      - B_joint_1
+      - B_joint_2
+      - B_joint_3
+      - B_joint_4
+      - B_joint_5
+      - B_joint_6
