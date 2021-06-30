@@ -10,6 +10,6 @@
 
    <param name="collision_detector" value="Hybrid" />
 
-   <rosparam command="load" file="$(find moveit)/config/chomp_planning.yaml" />
+   <rosparam command="load" file="$(find princeton_cell_moveit)/config/chomp_planning.yaml" />
 
 </launch>
